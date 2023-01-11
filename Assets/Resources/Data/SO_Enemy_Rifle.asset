@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d4989eba7df98b41891e91a7e144f55, type: 3}
+  m_Name: SO_Enemy_Rifle
+  m_EditorClassIdentifier: 
+  EnemyData:
+    enemyType: 0
+    Health: 70
+    Damage: 10
+    AttackDelay: 0.5
+    AttackRange: 25
+    WaitTime: 1
