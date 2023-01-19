@@ -75,6 +75,7 @@ namespace Game.Core.Obstacles
                 }
                 else
                 {
+                    print(other.gameObject.name);
                     Piece lastPiece = vehicleManager.GetLastVehiclePiece();
                     EventBase.NotifyListeners(EventType.PieceDestroyed, lastPiece);
                     //vehicleManager.RemovePiece();

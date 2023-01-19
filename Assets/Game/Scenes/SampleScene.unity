@@ -10090,7 +10090,7 @@ MonoBehaviour:
     poolSize: 100
   - objectPrefab: {fileID: 1781485547720661437, guid: fc7c6e77f259f2243bf450d0fe53e856,
       type: 3}
-    poolSize: 250
+    poolSize: 50
   - objectPrefab: {fileID: 1365530347550537085, guid: f6537c87ee5a6f44bb52b293467db95a,
       type: 3}
     poolSize: 30
@@ -12831,38 +12831,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1379396450, guid: 5df3b91c2af1cbd4b91f29f24dee9fa5, type: 3}
-      propertyPath: m_Parameters.colorGradient.ctime1
-      value: 39321
+    - target: {fileID: 8734411334453690874, guid: 5df3b91c2af1cbd4b91f29f24dee9fa5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1379396450, guid: 5df3b91c2af1cbd4b91f29f24dee9fa5, type: 3}
-      propertyPath: m_Parameters.colorGradient.key0.b
-      value: 0.07450981
-      objectReference: {fileID: 0}
-    - target: {fileID: 1379396450, guid: 5df3b91c2af1cbd4b91f29f24dee9fa5, type: 3}
-      propertyPath: m_Parameters.colorGradient.key0.g
-      value: 0.11764706
-      objectReference: {fileID: 0}
-    - target: {fileID: 1379396450, guid: 5df3b91c2af1cbd4b91f29f24dee9fa5, type: 3}
-      propertyPath: m_Parameters.colorGradient.key0.r
-      value: 0.80784315
-      objectReference: {fileID: 0}
-    - target: {fileID: 1379396450, guid: 5df3b91c2af1cbd4b91f29f24dee9fa5, type: 3}
-      propertyPath: m_Parameters.colorGradient.key1.b
-      value: 0.117871106
-      objectReference: {fileID: 0}
-    - target: {fileID: 1379396450, guid: 5df3b91c2af1cbd4b91f29f24dee9fa5, type: 3}
-      propertyPath: m_Parameters.colorGradient.key1.g
-      value: 0.5911554
-      objectReference: {fileID: 0}
-    - target: {fileID: 1379396450, guid: 5df3b91c2af1cbd4b91f29f24dee9fa5, type: 3}
-      propertyPath: m_Parameters.colorGradient.key1.r
-      value: 0.8113208
-      objectReference: {fileID: 0}
-    - target: {fileID: 1379396450, guid: 5df3b91c2af1cbd4b91f29f24dee9fa5, type: 3}
-      propertyPath: m_Parameters.colorGradient.key2.a
-      value: 0.41568628
-      objectReference: {fileID: 0}
+    - target: {fileID: 8734411334453690874, guid: 5df3b91c2af1cbd4b91f29f24dee9fa5,
+        type: 3}
+      propertyPath: bulletTrailSO
+      value: 
+      objectReference: {fileID: 11400000, guid: a6e83a94de11b1e40a4649646ea3deaf,
+        type: 2}
     - target: {fileID: 8734411334453690875, guid: 5df3b91c2af1cbd4b91f29f24dee9fa5,
         type: 3}
       propertyPath: m_Name

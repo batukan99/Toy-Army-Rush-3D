@@ -4,6 +4,7 @@ using UnityEngine;
 using Game.Managers;
 using Game.Core.Army;
 using Game.Core;
+using Game.Core.Enums;
 
 namespace Game.Controllers 
 {
@@ -17,10 +18,13 @@ namespace Game.Controllers
         public IDamageable EnemyTarget;
         private float _attackDelay => allyAI.GetAllyData().AttackDelay;
 
+        private const int ALLY_BULLET_LAYER = 6;
+
         private PoolManager _poolManager;
         private void Awake() {
             _poolManager = ManagerProvider.GetManager<PoolManager>();
         }
+
         
         public Coroutine StartAttackCoroutine() 
         {
@@ -40,10 +44,20 @@ namespace Game.Controllers
                 Vector3 muzzleTarget = new Vector3(EnemyTarget.transform.position.x, 
                         EnemyTarget.transform.position.y + Random.Range(1, 2), EnemyTarget.transform.position.z);
                 MuzzleTransform.LookAt(muzzleTarget);
-                Bullet bullet = _poolManager.GetBulletObject(MuzzleTransform.position, MuzzleTransform.rotation, null);
+
+                Bullet bullet = null;
+                if(allyAI._AllyData.allyType == AllyType.Rifle || allyAI._AllyData.allyType == AllyType.Sniper)
+                {
+                    bullet = _poolManager.GetBulletObject(MuzzleTransform.position, MuzzleTransform.rotation, null);
+                } 
+                else if (allyAI._AllyData.allyType == AllyType.Rocket) 
+                {
+                    bullet = _poolManager.GetHomingBulletObject(MuzzleTransform.position, MuzzleTransform.rotation, null);
+                }
                 if (bullet != null)
                 {
-                    bullet.Shoot(MuzzleTransform.rotation);
+                    bullet.SetLayer(ALLY_BULLET_LAYER);
+                    bullet.Shoot(MuzzleTransform.rotation, EnemyTarget.transform);
                 }
             }
             

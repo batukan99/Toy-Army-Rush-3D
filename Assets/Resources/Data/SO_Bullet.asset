@@ -18,15 +18,15 @@ MonoBehaviour:
     - allyType: 0
       AutoDestroyTime: 3
       SpawnDelay: 0.25
-      MoveSpeed: 25
+      MoveSpeed: 50
       Damage: 15
     - allyType: 1
       AutoDestroyTime: 3
       SpawnDelay: 0.25
-      MoveSpeed: 50
+      MoveSpeed: 150
       Damage: 30
     - allyType: 2
       AutoDestroyTime: 3
       SpawnDelay: 0.75
-      MoveSpeed: 20
+      MoveSpeed: 100
       Damage: 50

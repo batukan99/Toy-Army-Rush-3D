@@ -6,20 +6,30 @@ using Game.Managers;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField]
-    public AllyType AllyType;
-    [SerializeField] private TrailRenderer trailRenderer;
-    private BulletData _bulletData;
-    private Rigidbody _rigidBody;
-    private PoolManager _poolManager;
-    private float _autoDestroyTime;
-    private float _spawnDelay;
-    private float _moveSpeed;
-    public float _damage;
+    [SerializeField] public AllyType AllyType;
+    [SerializeField] protected TrailRenderer trailRenderer;
+    [SerializeField] protected SO_BulletTrail bulletTrailSO;
+
+    protected BulletData _bulletData;
+    protected BulletTrailData _bulletTrailData;
+    protected Rigidbody _rigidBody;
+    protected PoolManager _poolManager;
+    protected float _autoDestroyTime;
+    protected float _spawnDelay;
+    protected float _moveSpeed;
+    protected float _damage;
+    protected Transform _target;
     private BulletData GetData() => Resources.Load<SO_Bullet>("Data/SO_Bullet").BulletDatas[AllyType];
+    private BulletTrailData GetTrailData() => bulletTrailSO.BulletTrailData;
+
+    private bool _isDisabling = false;
+    protected const string DISABLE_METHOD_NAME = "Disable";
+    protected const string DO_DISABLE_METHOD_NAME = "DoDisable";
+    private const int DISABLED_BULLET_LAYER = 12;
     private void Awake()
     {
         _bulletData = GetData();
+        _bulletTrailData = GetTrailData();
         _autoDestroyTime = _bulletData.AutoDestroyTime;
         _spawnDelay = _bulletData.SpawnDelay;
         _moveSpeed = _bulletData.MoveSpeed;
@@ -28,8 +38,14 @@ public class Bullet : MonoBehaviour
         _rigidBody = GetComponent<Rigidbody>();
         _poolManager = ManagerProvider.GetManager<PoolManager>();
     }
-    public void Shoot(Quaternion muzzleRotation)
+
+    public void SetLayer(int newLayer)
     {
+        gameObject.layer = newLayer;
+    }
+    public virtual void Shoot(Quaternion muzzleRotation, Transform target)
+    {
+        this._target = target;
         transform.rotation = muzzleRotation;
         _rigidBody.AddForce(transform.forward * _moveSpeed, ForceMode.VelocityChange);
     }
@@ -44,17 +60,47 @@ public class Bullet : MonoBehaviour
         }
     }
 
+    private void ConfigureTrail()
+    {
+        if(trailRenderer != null && bulletTrailSO != null) 
+        {
+            _bulletTrailData.SetupTrail(trailRenderer);
+        }
+    }
+
     private void Disable()
     {
-        
-        CancelInvoke("Disable");
+        CancelInvoke(DISABLE_METHOD_NAME);
+        CancelInvoke(DO_DISABLE_METHOD_NAME);
+
         _rigidBody.velocity = Vector3.zero;
-        trailRenderer.Clear();
+        SetLayer(DISABLED_BULLET_LAYER);
+
+        if(trailRenderer != null && bulletTrailSO != null) 
+        {
+            _isDisabling = true;
+            Invoke(DO_DISABLE_METHOD_NAME, _bulletTrailData.Time);
+        }
+        else 
+        {
+            DoDisable();
+        }
+    }
+
+    public virtual void DoDisable()
+    {
+        if(trailRenderer != null && bulletTrailSO != null) 
+        {
+            trailRenderer.Clear();
+        }
         _poolManager.ReturnBulletToPool(this.gameObject);
     }
     private void OnEnable()
     {
-        CancelInvoke("Disable");
-        Invoke("Disable", _autoDestroyTime);
+        CancelInvoke(DISABLE_METHOD_NAME);
+        CancelInvoke(DO_DISABLE_METHOD_NAME);
+        Invoke(DISABLE_METHOD_NAME, _autoDestroyTime);
+        ConfigureTrail();
+        _isDisabling = false;
     }
 }

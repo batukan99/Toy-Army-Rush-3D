@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55e054b7aa23ff24e8eeb44345557416, type: 3}
+  m_Name: SO_BulletTrail_Rocket
+  m_EditorClassIdentifier: 
+  BulletTrailData:
+    WidthCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: -0.005460453
+        value: 0.4
+        inSlope: 2.2747135
+        outSlope: 2.2747135
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.112451196
+      - serializedVersion: 3
+        time: 0.21021953
+        value: 0.6
+        inSlope: -0.014676248
+        outSlope: -0.014676248
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.61615324
+        outWeight: 0.12943207
+      - serializedVersion: 3
+        time: 0.9327528
+        value: 0.35592425
+        inSlope: -1.3266754
+        outSlope: -1.3266754
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.050179027
+        outWeight: 0.25358137
+      - serializedVersion: 3
+        time: 1
+        value: 0.1
+        inSlope: -2.306616
+        outSlope: -2.306616
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.044464443
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    Time: 0.1
+    MinVertexDistance: 0.1
+    ColorGradient:
+      serializedVersion: 2
+      key0: {r: 0.9339623, g: 0.62840104, b: 0.047579136, a: 1}
+      key1: {r: 0.30355936, g: 0.863485, b: 0.1961468, a: 1}
+      key2: {r: 0.2861047, g: 0.8301887, b: 0.23025987, a: 0.7058824}
+      key3: {r: 0.2861047, g: 0.8301887, b: 0.23025987, a: 0}
+      key4: {r: 0.6603774, g: 0.62997836, b: 0.5818797, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 2313
+      ctime2: 65535
+      ctime3: 65535
+      ctime4: 65535
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 43176
+      atime2: 65535
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 3
+      m_NumAlphaKeys: 3
+    Material: {fileID: 2100000, guid: a85351672b2788e42ab8b00569906774, type: 2}
+    CornerVertices: 0
+    EndCapVertices: 0

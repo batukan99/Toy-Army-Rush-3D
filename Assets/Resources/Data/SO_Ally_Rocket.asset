@@ -16,6 +16,6 @@ MonoBehaviour:
     allyType: 2
     Health: 100
     Damage: 70
-    AttackDelay: 0.7
+    AttackDelay: 0.07
     AttackRange: 30
     WaitTime: 1

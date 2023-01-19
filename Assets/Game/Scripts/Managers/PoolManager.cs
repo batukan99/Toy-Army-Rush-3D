@@ -22,9 +22,9 @@ namespace Game.Managers
         {
             return objectPool.GetPooledObject(2, position, rotation, parent).GetComponent<Bullet>();
         }
-        public Bullet GetEnemyBulletObject(Vector3 position, Quaternion rotation, Transform parent) 
+        public Bullet GetHomingBulletObject(Vector3 position, Quaternion rotation, Transform parent) 
         {
-            return objectPool.GetPooledObject(3, position, rotation, parent).GetComponent<Bullet>();
+            return objectPool.GetPooledObject(3, position, rotation, parent).GetComponent<HomingBullet>();
         }
         public RectTransform GetMoneyPopUpObject(Vector3 position, Quaternion rotation, Transform parent) 
         {
@@ -43,7 +43,7 @@ namespace Game.Managers
         {
             objectPool.AddToPool(2, bullet);
         }
-        public void ReturnEnemyBulletToPool(GameObject bullet) 
+        public void ReturnHomingBulletToPool(GameObject bullet) 
         {
             objectPool.AddToPool(3, bullet);
         }

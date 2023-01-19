@@ -18,6 +18,7 @@ namespace Game.Controllers
         private float _attackDelay => enemyAI.GetEnemyData().AttackDelay;
 
         private PoolManager _poolManager;
+        private const int ENEMY_BULLET_LAYER = 7;
         private void Awake() {
             _poolManager = ManagerProvider.GetManager<PoolManager>();
         }
@@ -37,10 +38,12 @@ namespace Game.Controllers
                 Vector3 muzzleTarget = new Vector3(AllyTarget.transform.position.x, 
                         AllyTarget.transform.position.y + Random.Range(1, 2), AllyTarget.transform.position.z);
                 MuzzleTransform.LookAt(muzzleTarget);
-                Bullet bullet = _poolManager.GetEnemyBulletObject(MuzzleTransform.position, MuzzleTransform.rotation, null);
+
+                Bullet bullet = _poolManager.GetBulletObject(MuzzleTransform.position, MuzzleTransform.rotation, null);
                 if (bullet != null)
                 {
-                    bullet.Shoot(MuzzleTransform.rotation);
+                    bullet.SetLayer(ENEMY_BULLET_LAYER);
+                    bullet.Shoot(MuzzleTransform.rotation, AllyTarget.transform);
                 }
             }
 
