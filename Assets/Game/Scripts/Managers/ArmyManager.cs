@@ -13,8 +13,10 @@ namespace Game.Managers
     public class ArmyManager : MonoBehaviour, IProvidable
     {
         //public List<ArmyPlacementData> armyPlaces = new List<ArmyPlacementData>();
+
+        [SerializeField] private Color armyColor;
         public List<AllyAI> armies = new List<AllyAI>();
-         public List<AllyAI> deathArmies = new List<AllyAI>();
+        public List<AllyAI> deathArmies = new List<AllyAI>();
         protected List<Sequence> runningSequences = new List<Sequence>();
 
         private VehicleManager _vehicleManager;
@@ -56,6 +58,7 @@ namespace Game.Managers
                 return;
             }
             armies.Add(army);
+            army.meshRenderer.material.DOColor(armyColor, 1f).SetEase(Ease.OutQuart);
             
             /*
             army.PieceIndex = _currentPieceIndex;

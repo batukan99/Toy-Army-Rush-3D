@@ -9,6 +9,7 @@ using Game.Controllers;
 using Game.Core.Vehicle;
 using Game.Core.Events;
 using EventType = Game.Core.Enums.EventType;
+using DG.Tweening;
 
 namespace Game.Core.Army 
 {
@@ -22,6 +23,9 @@ namespace Game.Core.Army
         public Collider Collider { get; private set; }
 
         public Animator Animator { get; private set; }
+
+        [SerializeField] private SkinnedMeshRenderer meshRenderer;
+        [SerializeField] private Color deathColor = new Color32(80, 80, 80, 255);
 
         public ArmyStateMachine armySM;
 
@@ -154,6 +158,7 @@ namespace Game.Core.Army
         private void OnDeath()
         {
             _isDeath = true;
+            meshRenderer.material.DOColor(deathColor, 1.5f).SetEase(Ease.OutQuart);
         }
         private void OnGameOver(bool status) 
         {

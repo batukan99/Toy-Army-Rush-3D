@@ -22,7 +22,6 @@ public class Bullet : MonoBehaviour
     private BulletData GetData() => Resources.Load<SO_Bullet>("Data/SO_Bullet").BulletDatas[AllyType];
     private BulletTrailData GetTrailData() => bulletTrailSO.BulletTrailData;
 
-    private bool _isDisabling = false;
     protected const string DISABLE_METHOD_NAME = "Disable";
     protected const string DO_DISABLE_METHOD_NAME = "DoDisable";
     private const int DISABLED_BULLET_LAYER = 12;
@@ -78,7 +77,7 @@ public class Bullet : MonoBehaviour
 
         if(trailRenderer != null && bulletTrailSO != null) 
         {
-            _isDisabling = true;
+            //_isDisabling = true;
             Invoke(DO_DISABLE_METHOD_NAME, _bulletTrailData.Time);
         }
         else 
@@ -101,6 +100,6 @@ public class Bullet : MonoBehaviour
         CancelInvoke(DO_DISABLE_METHOD_NAME);
         Invoke(DISABLE_METHOD_NAME, _autoDestroyTime);
         ConfigureTrail();
-        _isDisabling = false;
+        //_isDisabling = false;
     }
 }

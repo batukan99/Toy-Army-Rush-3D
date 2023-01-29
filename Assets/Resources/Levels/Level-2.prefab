@@ -315,7 +315,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fddce9b4611bb4241837cd444f2ff999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 20
 --- !u!1 &1629862397
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,7 +474,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fddce9b4611bb4241837cd444f2ff999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 20
 --- !u!1 &251624150038377066
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,6 +537,7 @@ MonoBehaviour:
   multiplier: 7
   text: {fileID: 4364600613107738676}
   meshRenderer: {fileID: 5371310302685072932}
+  collectedCountOnFinish: 0
 --- !u!1 &315453011253844358
 GameObject:
   m_ObjectHideFlags: 0
@@ -751,7 +750,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fddce9b4611bb4241837cd444f2ff999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 20
 --- !u!1 &406035603553337270
 GameObject:
   m_ObjectHideFlags: 0
@@ -1145,6 +1143,7 @@ MonoBehaviour:
   multiplier: 8
   text: {fileID: 47703710554305059}
   meshRenderer: {fileID: 1626323871946295549}
+  collectedCountOnFinish: 0
 --- !u!1 &958739336677985492
 GameObject:
   m_ObjectHideFlags: 0
@@ -1371,7 +1370,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fddce9b4611bb4241837cd444f2ff999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 20
 --- !u!1 &1058541647121849275
 GameObject:
   m_ObjectHideFlags: 0
@@ -1537,7 +1535,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fddce9b4611bb4241837cd444f2ff999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 20
 --- !u!1 &1112431281406621676
 GameObject:
   m_ObjectHideFlags: 0
@@ -1614,7 +1611,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fddce9b4611bb4241837cd444f2ff999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 20
 --- !u!1 &1222823300598428055
 GameObject:
   m_ObjectHideFlags: 0
@@ -1827,7 +1823,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fddce9b4611bb4241837cd444f2ff999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 20
 --- !u!1 &1370433161498779613
 GameObject:
   m_ObjectHideFlags: 0
@@ -2202,7 +2197,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fddce9b4611bb4241837cd444f2ff999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 20
 --- !u!1 &1616104906906880579
 GameObject:
   m_ObjectHideFlags: 0
@@ -2279,7 +2273,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fddce9b4611bb4241837cd444f2ff999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 20
 --- !u!1 &1698068252097052012
 GameObject:
   m_ObjectHideFlags: 0
@@ -2479,6 +2472,7 @@ MonoBehaviour:
   multiplier: 4
   text: {fileID: 8860036646286311923}
   meshRenderer: {fileID: 5448343394441484633}
+  collectedCountOnFinish: 0
 --- !u!1 &1948634065747972944
 GameObject:
   m_ObjectHideFlags: 0
@@ -3072,7 +3066,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fddce9b4611bb4241837cd444f2ff999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 20
 --- !u!1 &2910662028114224885
 GameObject:
   m_ObjectHideFlags: 0
@@ -3272,6 +3265,7 @@ MonoBehaviour:
   multiplier: 3
   text: {fileID: 6197697449722491883}
   meshRenderer: {fileID: 893964868079551973}
+  collectedCountOnFinish: 0
 --- !u!1 &3343405553867307499
 GameObject:
   m_ObjectHideFlags: 0
@@ -4877,6 +4871,7 @@ MonoBehaviour:
   multiplier: 6
   text: {fileID: 4392270371322539434}
   meshRenderer: {fileID: 5063878547503375066}
+  collectedCountOnFinish: 0
 --- !u!1 &5509173428445344424
 GameObject:
   m_ObjectHideFlags: 0
@@ -5036,7 +5031,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fddce9b4611bb4241837cd444f2ff999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 20
 --- !u!1 &5720842876303867035
 GameObject:
   m_ObjectHideFlags: 0
@@ -5444,6 +5438,7 @@ MonoBehaviour:
   multiplier: 5
   text: {fileID: 4999781822528827191}
   meshRenderer: {fileID: 3787069359399548574}
+  collectedCountOnFinish: 0
 --- !u!1 &6035212771129095269
 GameObject:
   m_ObjectHideFlags: 0
@@ -6205,6 +6200,7 @@ MonoBehaviour:
   multiplier: 2
   text: {fileID: 7565533902192373934}
   meshRenderer: {fileID: 5503546976457291263}
+  collectedCountOnFinish: 0
 --- !u!1 &6931640041255426954
 GameObject:
   m_ObjectHideFlags: 0
@@ -7051,6 +7047,8 @@ MonoBehaviour:
     AttackDelay: 0
     AttackRange: 0
     WaitTime: 0
+  meshRenderer: {fileID: 0}
+  deathColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
   CurrentTarget: {fileID: 0}
   VehicleTarget: {fileID: 0}
   AimedAtTarget: 0
@@ -7263,7 +7261,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fddce9b4611bb4241837cd444f2ff999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 20
 --- !u!1 &7864234236090849815
 GameObject:
   m_ObjectHideFlags: 0
@@ -7653,6 +7650,8 @@ MonoBehaviour:
     AttackDelay: 0
     AttackRange: 0
     WaitTime: 0
+  meshRenderer: {fileID: 0}
+  deathColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
   CurrentTarget: {fileID: 0}
   VehicleTarget: {fileID: 0}
   AimedAtTarget: 0
@@ -7763,6 +7762,8 @@ MonoBehaviour:
     AttackDelay: 0
     AttackRange: 0
     WaitTime: 0
+  meshRenderer: {fileID: 0}
+  deathColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
   CurrentTarget: {fileID: 0}
   VehicleTarget: {fileID: 0}
   AimedAtTarget: 0
@@ -7991,6 +7992,8 @@ MonoBehaviour:
     AttackDelay: 0
     AttackRange: 0
     WaitTime: 0
+  meshRenderer: {fileID: 0}
+  deathColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
   CurrentTarget: {fileID: 0}
   VehicleTarget: {fileID: 0}
   AimedAtTarget: 0
@@ -8229,6 +8232,8 @@ MonoBehaviour:
     AttackDelay: 0
     AttackRange: 0
     WaitTime: 0
+  meshRenderer: {fileID: 0}
+  deathColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
   CurrentTarget: {fileID: 0}
   enemies: []
   IsJumpedIntoVehicle: 0
@@ -8237,7 +8242,6 @@ MonoBehaviour:
   LastShiftedValue: 0
   AimedAtTarget: 0
   PieceIndex: 0
-  AttackDelay: 0
   _health: 100
   _damage: 0
 --- !u!114 &7864234236470091067
@@ -8374,6 +8378,8 @@ MonoBehaviour:
     AttackDelay: 0
     AttackRange: 0
     WaitTime: 0
+  meshRenderer: {fileID: 0}
+  deathColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
   CurrentTarget: {fileID: 0}
   enemies: []
   IsJumpedIntoVehicle: 0
@@ -8382,7 +8388,6 @@ MonoBehaviour:
   LastShiftedValue: 0
   AimedAtTarget: 0
   PieceIndex: 0
-  AttackDelay: 0
   _health: 100
   _damage: 0
 --- !u!114 &7864234236496329871
@@ -8488,6 +8493,8 @@ MonoBehaviour:
     AttackDelay: 0
     AttackRange: 0
     WaitTime: 0
+  meshRenderer: {fileID: 0}
+  deathColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
   CurrentTarget: {fileID: 0}
   enemies: []
   IsJumpedIntoVehicle: 0
@@ -8496,7 +8503,6 @@ MonoBehaviour:
   LastShiftedValue: 0
   AimedAtTarget: 0
   PieceIndex: 0
-  AttackDelay: 0
   _health: 100
   _damage: 0
 --- !u!114 &7864234236500534135
@@ -8775,6 +8781,8 @@ MonoBehaviour:
     AttackDelay: 0
     AttackRange: 0
     WaitTime: 0
+  meshRenderer: {fileID: 0}
+  deathColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
   CurrentTarget: {fileID: 0}
   enemies: []
   IsJumpedIntoVehicle: 0
@@ -8783,7 +8791,6 @@ MonoBehaviour:
   LastShiftedValue: 0
   AimedAtTarget: 0
   PieceIndex: 0
-  AttackDelay: 0
   _health: 100
   _damage: 0
 --- !u!114 &7864234236585917704
@@ -8889,6 +8896,8 @@ MonoBehaviour:
     AttackDelay: 0
     AttackRange: 0
     WaitTime: 0
+  meshRenderer: {fileID: 0}
+  deathColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
   CurrentTarget: {fileID: 0}
   enemies: []
   IsJumpedIntoVehicle: 0
@@ -8897,7 +8906,6 @@ MonoBehaviour:
   LastShiftedValue: 0
   AimedAtTarget: 0
   PieceIndex: 0
-  AttackDelay: 0
   _health: 100
   _damage: 0
 --- !u!114 &7864234236588316860
@@ -9003,6 +9011,8 @@ MonoBehaviour:
     AttackDelay: 0
     AttackRange: 0
     WaitTime: 0
+  meshRenderer: {fileID: 0}
+  deathColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
   CurrentTarget: {fileID: 0}
   enemies: []
   IsJumpedIntoVehicle: 0
@@ -9011,7 +9021,6 @@ MonoBehaviour:
   LastShiftedValue: 0
   AimedAtTarget: 0
   PieceIndex: 0
-  AttackDelay: 0
   _health: 100
   _damage: 0
 --- !u!114 &7864234236599556040
@@ -9176,6 +9185,8 @@ MonoBehaviour:
     AttackDelay: 0
     AttackRange: 0
     WaitTime: 0
+  meshRenderer: {fileID: 0}
+  deathColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
   CurrentTarget: {fileID: 0}
   VehicleTarget: {fileID: 0}
   AimedAtTarget: 0
@@ -9751,6 +9762,8 @@ MonoBehaviour:
     AttackDelay: 0
     AttackRange: 0
     WaitTime: 0
+  meshRenderer: {fileID: 0}
+  deathColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
   CurrentTarget: {fileID: 0}
   enemies: []
   IsJumpedIntoVehicle: 0
@@ -9759,7 +9772,6 @@ MonoBehaviour:
   LastShiftedValue: 0
   AimedAtTarget: 0
   PieceIndex: 0
-  AttackDelay: 0
   _health: 100
   _damage: 0
 --- !u!114 &7864234236751887498
@@ -10086,7 +10098,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fddce9b4611bb4241837cd444f2ff999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 20
 --- !u!1 &7864234236916206135
 GameObject:
   m_ObjectHideFlags: 0
@@ -10324,6 +10335,8 @@ MonoBehaviour:
     AttackDelay: 0
     AttackRange: 0
     WaitTime: 0
+  meshRenderer: {fileID: 0}
+  deathColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
   CurrentTarget: {fileID: 0}
   VehicleTarget: {fileID: 0}
   AimedAtTarget: 0
@@ -10493,6 +10506,8 @@ MonoBehaviour:
     AttackDelay: 0
     AttackRange: 0
     WaitTime: 0
+  meshRenderer: {fileID: 0}
+  deathColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
   CurrentTarget: {fileID: 0}
   enemies: []
   IsJumpedIntoVehicle: 0
@@ -10501,7 +10516,6 @@ MonoBehaviour:
   LastShiftedValue: 0
   AimedAtTarget: 0
   PieceIndex: 0
-  AttackDelay: 0
   _health: 100
   _damage: 0
 --- !u!114 &7864234237110512508
@@ -10638,6 +10652,8 @@ MonoBehaviour:
     AttackDelay: 0
     AttackRange: 0
     WaitTime: 0
+  meshRenderer: {fileID: 0}
+  deathColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
   CurrentTarget: {fileID: 0}
   enemies: []
   IsJumpedIntoVehicle: 0
@@ -10646,7 +10662,6 @@ MonoBehaviour:
   LastShiftedValue: 0
   AimedAtTarget: 0
   PieceIndex: 0
-  AttackDelay: 0
   _health: 100
   _damage: 0
 --- !u!114 &7864234237191658791
@@ -10814,6 +10829,8 @@ MonoBehaviour:
     AttackDelay: 0
     AttackRange: 0
     WaitTime: 0
+  meshRenderer: {fileID: 0}
+  deathColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
   CurrentTarget: {fileID: 0}
   enemies: []
   IsJumpedIntoVehicle: 0
@@ -10822,7 +10839,6 @@ MonoBehaviour:
   LastShiftedValue: 0
   AimedAtTarget: 0
   PieceIndex: 0
-  AttackDelay: 0
   _health: 100
   _damage: 0
 --- !u!114 &7864234237216064836
@@ -10987,6 +11003,8 @@ MonoBehaviour:
     AttackDelay: 0
     AttackRange: 0
     WaitTime: 0
+  meshRenderer: {fileID: 0}
+  deathColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
   CurrentTarget: {fileID: 0}
   VehicleTarget: {fileID: 0}
   AimedAtTarget: 0
@@ -11200,6 +11218,8 @@ MonoBehaviour:
     AttackDelay: 0
     AttackRange: 0
     WaitTime: 0
+  meshRenderer: {fileID: 0}
+  deathColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
   CurrentTarget: {fileID: 0}
   enemies: []
   IsJumpedIntoVehicle: 0
@@ -11208,7 +11228,6 @@ MonoBehaviour:
   LastShiftedValue: 0
   AimedAtTarget: 0
   PieceIndex: 0
-  AttackDelay: 0
   _health: 100
   _damage: 0
 --- !u!114 &7864234237459270254
@@ -11364,7 +11383,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fddce9b4611bb4241837cd444f2ff999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 20
 --- !u!1 &7864234237600202080
 GameObject:
   m_ObjectHideFlags: 0
@@ -11715,6 +11733,8 @@ MonoBehaviour:
     AttackDelay: 0
     AttackRange: 0
     WaitTime: 0
+  meshRenderer: {fileID: 0}
+  deathColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
   CurrentTarget: {fileID: 0}
   VehicleTarget: {fileID: 0}
   AimedAtTarget: 0
@@ -11813,7 +11833,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fddce9b4611bb4241837cd444f2ff999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 20
 --- !u!1 &7864234237732999564
 GameObject:
   m_ObjectHideFlags: 0
@@ -12127,6 +12146,8 @@ MonoBehaviour:
     AttackDelay: 0
     AttackRange: 0
     WaitTime: 0
+  meshRenderer: {fileID: 0}
+  deathColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
   CurrentTarget: {fileID: 0}
   VehicleTarget: {fileID: 0}
   AimedAtTarget: 0
@@ -12284,7 +12305,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fddce9b4611bb4241837cd444f2ff999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 20
 --- !u!1 &7864234237862901403
 GameObject:
   m_ObjectHideFlags: 0
@@ -12373,6 +12393,8 @@ MonoBehaviour:
     AttackDelay: 0
     AttackRange: 0
     WaitTime: 0
+  meshRenderer: {fileID: 0}
+  deathColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
   CurrentTarget: {fileID: 0}
   VehicleTarget: {fileID: 0}
   AimedAtTarget: 0
@@ -12483,6 +12505,8 @@ MonoBehaviour:
     AttackDelay: 0
     AttackRange: 0
     WaitTime: 0
+  meshRenderer: {fileID: 0}
+  deathColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
   CurrentTarget: {fileID: 0}
   VehicleTarget: {fileID: 0}
   AimedAtTarget: 0
@@ -12707,6 +12731,8 @@ MonoBehaviour:
     AttackDelay: 0
     AttackRange: 0
     WaitTime: 0
+  meshRenderer: {fileID: 0}
+  deathColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
   CurrentTarget: {fileID: 0}
   enemies: []
   IsJumpedIntoVehicle: 0
@@ -12715,7 +12741,6 @@ MonoBehaviour:
   LastShiftedValue: 0
   AimedAtTarget: 0
   PieceIndex: 0
-  AttackDelay: 0
   _health: 100
   _damage: 0
 --- !u!114 &7864234237938429451
@@ -12809,7 +12834,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fddce9b4611bb4241837cd444f2ff999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 20
 --- !u!1 &7864234237991240558
 GameObject:
   m_ObjectHideFlags: 0
@@ -14049,7 +14073,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fddce9b4611bb4241837cd444f2ff999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 20
 --- !u!1 &9166349183017745164
 GameObject:
   m_ObjectHideFlags: 0

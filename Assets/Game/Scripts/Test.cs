@@ -21,7 +21,6 @@ public class Test : MonoBehaviour
 
         private void OnGameStarted() 
         {
-            Debug.Log("started");
         }
 
         private void OnScoreUpdated() 

@@ -52,7 +52,6 @@ namespace Game.StateMachines
         public void AddAnyTransition(State state, Func<bool> predicate)
         {
             _anyTransitions.Add(new Transition(state, predicate));
-            Debug.Log(_anyTransitions);
         }
 
         private Transition GetTransition()

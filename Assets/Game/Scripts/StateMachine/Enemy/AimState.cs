@@ -42,7 +42,6 @@ namespace Game.StateMachines.Enemy
                 enemyAI.allies.RemoveAll(enemyAI.DisabledDamageables);
                 if(enemyAI.CurrentTarget.IsDeath()) 
                 {
-                    Debug.Log("there was a death on list");
                     enemyAI.CurrentTarget = null;
                 }     
             }

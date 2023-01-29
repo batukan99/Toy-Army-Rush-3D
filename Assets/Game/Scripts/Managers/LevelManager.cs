@@ -69,6 +69,7 @@ namespace Game.Managers
                 int collectedAmount = GameSettings.CollectableMoneyValue * Multiplier.lastAchievedMultiplier.collectedCountOnFinish;
                 int incomeBonus = DataManager.Instance.IncomeUpgrade * GameSettings.IncomeUpgradeValue;
                 int endMoney = (collectedAmount + incomeBonus) * Multiplier.lastAchievedMultiplier.Value;
+                print(endMoney);
 
                 UIManager uiManager = ManagerProvider.GetManager<UIManager>();
                 uiManager.endPanel.SetEndMoneyText(endMoney);

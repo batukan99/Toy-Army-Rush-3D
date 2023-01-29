@@ -41,10 +41,11 @@ namespace Game.Managers
 
                 money.gameObject.SetActive(true);
                 
-                if (onComplete != null)
-                {
-                    DelayHandler.WaitAndInvoke(onComplete.Invoke, 2 * duration + 0.1f + delay);
-                }
+                
+            }
+            if (onComplete != null)
+            {
+                DelayHandler.WaitAndInvoke(onComplete.Invoke, 2 * duration + 0.1f + delay);
             }
         }
     }

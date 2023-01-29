@@ -18,7 +18,6 @@ namespace Game.StateMachines.Ally
         {
             base.Enter();
             allyAI.Animator.SetTrigger("Die");
-            Debug.Log("Ally died");
         }
 
         public override void Exit()

@@ -27,7 +27,6 @@ namespace Game.StateMachines.Ally
         {
             base.Enter();
             _target = allyAI.CurrentTarget;
-            Debug.Log("attackEntered");
         }
 
         public override void Exit()

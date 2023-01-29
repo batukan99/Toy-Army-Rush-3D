@@ -18,7 +18,6 @@ namespace Game.StateMachines.Enemy
         {
             base.Enter();
             enemyAI.Animator.SetTrigger("Die");
-            Debug.Log("enemy army died");
         }
 
         public override void Exit()

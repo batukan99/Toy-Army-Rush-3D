@@ -75,7 +75,8 @@ namespace Game.Managers
 
                     if(!backFence.gameObject.activeSelf)
                         backFence.gameObject.SetActive(true);
-                    backFence.DOLocalMoveZ(backFence.localPosition.z + 1f, 0.25f);
+                    backFence.DOComplete();
+                    backFence.DOLocalMoveZ(backFence.localPosition.z - 1f, 0.25f);
                 }
             }
 
@@ -110,7 +111,8 @@ namespace Game.Managers
                 seq.Join(piece.transform.DOScale(0f, duration));
                 seq.OnComplete(() => piece.gameObject.SetActive(false));
 
-                backFence.DOLocalMoveZ(backFence.localPosition.z - 1f, 0.25f);
+                backFence.DOComplete();
+                backFence.DOLocalMoveZ(backFence.localPosition.z + 1f, 0.25f);
                 // Move progress indicator.
                 //uiManager.gamePanel.progressUI.MoveArrow(PieceCount);
             }

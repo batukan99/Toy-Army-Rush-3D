@@ -8,6 +8,7 @@ using Game.Core.Data;
 using Game.Controllers;
 using Game.Core.Events;
 using EventType = Game.Core.Enums.EventType;
+using DG.Tweening;
 
 namespace Game.Core.Army 
 {
@@ -21,6 +22,8 @@ namespace Game.Core.Army
         public Collider Collider { get; private set; }
 
         public Animator Animator { get; private set; }
+        [SerializeField] public SkinnedMeshRenderer meshRenderer;
+        [SerializeField] private Color deathColor = new Color32(80, 80, 80, 255);
 
         public ArmyStateMachine armySM;
 
@@ -152,6 +155,7 @@ namespace Game.Core.Army
         {
             _health = 0;
             _isDeath = true;
+            meshRenderer.material.DOColor(deathColor, 1.5f).SetEase(Ease.OutQuart);
             EventBase.NotifyListeners(EventType.AllyDied, (AllyAI)this);
         }
         public void SetTargetEnemyArmy(IDamageable target)
