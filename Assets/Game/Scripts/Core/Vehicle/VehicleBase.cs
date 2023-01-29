@@ -20,6 +20,7 @@ namespace Game.Core.Vehicle
         public virtual void AddPieceToVehicle(Piece piece)
         {
             pieces.Add(piece);
+            EventBase.NotifyListeners(EventType.PieceCollected, piece);
             
             if (pieces.Count >= 1)
             {

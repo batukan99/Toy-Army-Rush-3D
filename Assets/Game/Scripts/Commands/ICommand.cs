@@ -1,6 +1,10 @@
 
-
-public abstract class ICommand 
+namespace Game.Commands
 {
-   public abstract void Execute();
+   public interface  ICommand 
+   {
+      void Execute();
+      void Undo();
+   }
 }
+

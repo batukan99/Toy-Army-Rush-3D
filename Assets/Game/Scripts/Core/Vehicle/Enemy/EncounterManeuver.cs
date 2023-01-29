@@ -12,6 +12,8 @@ namespace Game.Core.Vehicle.Enemy
             print("encounter");
 
             enemyHelicopter.transform.DOKill();
+            enemyHelicopter.transform.DOLocalMoveX(enemyHelicopter.transform.localPosition.x + enemyHelicopter.WeavingDistance/2, 2f)
+                .SetEase(Ease.InOutSine);
             enemyHelicopter.transform.DOLocalMoveY(enemyHelicopter.transform.localPosition.y + enemyHelicopter.MaxHeight, 2f)
                 .SetEase(Ease.InOutSine);
             enemyHelicopter.transform.DORotate(new Vector3(0, 25, 0), 2f).SetEase(Ease.InOutSine)

@@ -13,6 +13,7 @@ namespace Game.Core.Enums
         PieceDestroyed,
         ArmyCollected,
         AllyDied,
+        HelicopterDestroyed,
         RocketFired,
         RocketExploded,
         MoneyAdded,

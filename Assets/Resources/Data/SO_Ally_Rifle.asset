@@ -15,7 +15,7 @@ MonoBehaviour:
   AllyData:
     allyType: 0
     Health: 100
-    Damage: 10
-    AttackDelay: 0.025
+    Damage: 15
+    AttackDelay: 0.3
     AttackRange: 25
     WaitTime: 1

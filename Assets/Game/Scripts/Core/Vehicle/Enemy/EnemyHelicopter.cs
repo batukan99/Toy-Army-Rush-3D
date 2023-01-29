@@ -1,8 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using Game.Core.Army;
+using Game.Core.Events;
+using EventType = Game.Core.Enums.EventType;
 
 namespace Game.Core.Vehicle.Enemy 
 {
@@ -95,7 +96,11 @@ namespace Game.Core.Vehicle.Enemy
         {
             meshRenderer.material.DOColor(deathColor, 1.5f).SetEase(Ease.OutQuart);
 
+            EventBase.NotifyListeners(EventType.HelicopterDestroyed);
+
             transform.DOKill();
+
+            ForwardSpeed *= 3;
 
             Vector3 currentRotation = transform.eulerAngles;
             transform.DOMoveY(transform.position.y - DropDistance, 2f);

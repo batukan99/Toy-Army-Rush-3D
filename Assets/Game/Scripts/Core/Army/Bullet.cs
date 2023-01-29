@@ -3,6 +3,8 @@ using Game.Core.Enums;
 using Game.Core.Data;
 using Game.Core;
 using Game.Managers;
+using Game.Core.Events;
+using EventType = Game.Core.Enums.EventType;
 
 public class Bullet : MonoBehaviour
 {
@@ -54,6 +56,9 @@ public class Bullet : MonoBehaviour
         IDamageable damageable;
         if (other.TryGetComponent<IDamageable>(out damageable))
         {
+            if(GetType() == typeof(HomingBullet))
+                EventBase.NotifyListeners(EventType.RocketExploded);
+
             damageable.TakeDamage(_damage);
             Disable();
         }

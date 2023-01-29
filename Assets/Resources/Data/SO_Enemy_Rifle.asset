@@ -16,6 +16,6 @@ MonoBehaviour:
     enemyType: 0
     Health: 70
     Damage: 5
-    AttackDelay: 0.5
+    AttackDelay: 0.7
     AttackRange: 25
     WaitTime: 1
