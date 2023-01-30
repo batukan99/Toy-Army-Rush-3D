@@ -17,4 +17,4 @@ MonoBehaviour:
     MaxSideBlocks: 0
     MaxForwardBlock: 0
     SidewaySpeed: 55
-    ForwardSpeed: 10
+    ForwardSpeed: 8.5
