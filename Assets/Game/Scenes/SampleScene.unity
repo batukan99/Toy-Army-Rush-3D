@@ -2504,7 +2504,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2075789445}
         m_TargetAssemblyTypeName: Game.Managers.LevelManager, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_MethodName: ShowRewardedAd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4082,6 +4082,7 @@ GameObject:
   - component: {fileID: 664926870}
   - component: {fileID: 664926872}
   - component: {fileID: 664926873}
+  - component: {fileID: 664926874}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -4146,6 +4147,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectPool: {fileID: 0}
+--- !u!114 &664926874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664926869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a6ebfc9ae60974c9316adb6464307b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseRealAds: 0
+  InterstitialAdFrequency: 3
 --- !u!1 &672335473
 GameObject:
   m_ObjectHideFlags: 0
@@ -12362,7 +12377,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2075789445}
         m_TargetAssemblyTypeName: Game.Managers.LevelManager, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_MethodName: ClaimMoney
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12954,7 +12969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelCount: 2
-  playLevel: -1
+  playLevel: 1
   levelText: {fileID: 2026936152}
 --- !u!4 &2075789446
 Transform:

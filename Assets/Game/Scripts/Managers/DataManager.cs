@@ -16,12 +16,14 @@ namespace Game.Managers
         private readonly string DamageUpgradeData = "data_upgrade_damage";
         private readonly string IncomeUpgradeData = "data_upgrade_income";
         private readonly string HealthUpgradeData = "data_upgrade_health";
+        private readonly string InterstitialCounterData = "data_interstitial_counter";
 
         public int Level { get; private set; }
         public int Money { get; private set; }
         public int DamageUpgrade { get; private set; }
         public int IncomeUpgrade { get; private set; }
         public int HealthUpgrade { get; private set; }
+        public int InterstitialCounter { get; private set; }
 
         public void GetDatas()
         {
@@ -30,6 +32,7 @@ namespace Game.Managers
             DamageUpgrade = PlayerPrefs.GetInt(DamageUpgradeData, 1);
             IncomeUpgrade = PlayerPrefs.GetInt(IncomeUpgradeData, 1);
             HealthUpgrade = PlayerPrefs.GetInt(HealthUpgradeData, 1);
+            InterstitialCounter = PlayerPrefs.GetInt(InterstitialCounterData, 1);
         }
         public int GetUpgradeButtonLevel(UpgradeButtonType upgradeButtonType) 
         {
@@ -90,6 +93,13 @@ namespace Game.Managers
                 PlayerPrefs.SetInt(HealthUpgradeData, level);
                 break;
             }
+            PlayerPrefs.Save();
+        }
+
+        public void SetInterstitialCounter(int _interstitialCounter)
+        {
+            InterstitialCounter = _interstitialCounter;
+            PlayerPrefs.SetInt(InterstitialCounterData, InterstitialCounter);
             PlayerPrefs.Save();
         }
         

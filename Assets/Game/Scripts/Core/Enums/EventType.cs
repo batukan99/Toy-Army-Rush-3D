@@ -18,6 +18,7 @@ namespace Game.Core.Enums
         RocketExploded,
         MoneyAdded,
         MoneyDecreased,
+        AdRewarded,
         
     }
 }
