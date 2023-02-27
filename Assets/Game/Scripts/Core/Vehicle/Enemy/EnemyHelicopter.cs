@@ -4,6 +4,7 @@ using DG.Tweening;
 using Game.Core.Army;
 using Game.Core.Events;
 using EventType = Game.Core.Enums.EventType;
+using Game.Managers;
 
 namespace Game.Core.Vehicle.Enemy 
 {
@@ -24,6 +25,8 @@ namespace Game.Core.Vehicle.Enemy
 
         private float _enemyAILastPositionX;
         private bool _isDeath;
+        private AudioSource _audioSource;
+        private SoundManager _soundManager => ManagerProvider.GetManager<SoundManager>();
         private void Start() 
         {
             Rotor.DOLocalRotate(new Vector3(0, 360, 0), 1, RotateMode.FastBeyond360).SetEase(Ease.Linear).SetLoops(-1, LoopType.Restart);
@@ -34,6 +37,8 @@ namespace Game.Core.Vehicle.Enemy
             _strategies.Add(gameObject.AddComponent<WeavingManeuver>());
 
             _enemyAILastPositionX = enemyAI.GetTransform().position.x;
+
+            _audioSource = GetComponent<AudioSource>();
         }
 
         public bool canMove;
@@ -87,6 +92,7 @@ namespace Game.Core.Vehicle.Enemy
 
         private void KillHelicopter()
         {
+            _soundManager.PlayRocketHitSound(_audioSource);
             transform.DOKill();
             transform.DOShakeRotation(1f, 1, 2, 1);
             transform.DOShakePosition(1f, 1, 2, 1).OnComplete( () => DropHelicopter() );
@@ -97,6 +103,7 @@ namespace Game.Core.Vehicle.Enemy
             meshRenderer.material.DOColor(deathColor, 1.5f).SetEase(Ease.OutQuart);
 
             EventBase.NotifyListeners(EventType.HelicopterDestroyed);
+            _soundManager.PlayExplosionSound(_audioSource);
 
             transform.DOKill();
 

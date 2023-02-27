@@ -19,10 +19,11 @@ namespace Game.Core.Army
         private EnemyAttackController attackController;
         public abstract EnemyData GetEnemyData();
         public abstract void SetEnemyData();
+        public abstract void PlayFireSound();
         public EnemyData _EnemyData;
         public Collider Collider { get; private set; }
-
         public Animator Animator { get; private set; }
+        public AudioSource AudioSource { get; private set; }
 
         [SerializeField] private SkinnedMeshRenderer meshRenderer;
         [SerializeField] private Color deathColor = new Color32(80, 80, 80, 255);
@@ -58,6 +59,7 @@ namespace Game.Core.Army
             SetEnemyData();
             Collider = GetComponent<Collider>();
             Animator = GetComponentInChildren<Animator>();
+            AudioSource = GetComponent<AudioSource>();
         }
 
         private void Start()

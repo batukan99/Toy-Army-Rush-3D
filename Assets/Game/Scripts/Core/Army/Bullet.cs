@@ -15,7 +15,9 @@ public class Bullet : MonoBehaviour
     protected BulletData _bulletData;
     protected BulletTrailData _bulletTrailData;
     protected Rigidbody _rigidBody;
+    protected AudioSource _audioSource;
     protected PoolManager _poolManager;
+    protected SoundManager _soundManager => ManagerProvider.GetManager<SoundManager>();
     protected float _autoDestroyTime;
     protected float _spawnDelay;
     protected float _moveSpeed;
@@ -37,6 +39,7 @@ public class Bullet : MonoBehaviour
         _damage = _bulletData.Damage;
 
         _rigidBody = GetComponent<Rigidbody>();
+        _audioSource = GetComponent<AudioSource>();
         _poolManager = ManagerProvider.GetManager<PoolManager>();
     }
 
@@ -57,7 +60,10 @@ public class Bullet : MonoBehaviour
         if (other.TryGetComponent<IDamageable>(out damageable))
         {
             if(GetType() == typeof(HomingBullet))
+            {
                 EventBase.NotifyListeners(EventType.RocketExploded);
+                _soundManager.PlayRocketHitSound(_audioSource);
+            }
 
             damageable.TakeDamage(_damage);
             Disable();

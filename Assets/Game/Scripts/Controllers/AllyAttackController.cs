@@ -21,8 +21,10 @@ namespace Game.Controllers
         private const int ALLY_BULLET_LAYER = 6;
 
         private PoolManager _poolManager;
+        private SoundManager _soundManager;
         private void Awake() {
             _poolManager = ManagerProvider.GetManager<PoolManager>();
+            _soundManager = ManagerProvider.GetManager<SoundManager>();
         }
 
         
@@ -58,6 +60,7 @@ namespace Game.Controllers
                 {
                     bullet.SetLayer(ALLY_BULLET_LAYER);
                     bullet.Shoot(MuzzleTransform.rotation, EnemyTarget.transform);
+                    allyAI.PlayFireSound();
                 }
             }
             

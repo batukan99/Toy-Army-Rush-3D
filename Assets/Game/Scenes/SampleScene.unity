@@ -2745,7 +2745,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 327671947}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 150}
+  m_LocalPosition: {x: 0, y: 1, z: -45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4083,6 +4083,7 @@ GameObject:
   - component: {fileID: 664926872}
   - component: {fileID: 664926873}
   - component: {fileID: 664926874}
+  - component: {fileID: 664926875}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -4161,6 +4162,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UseRealAds: 0
   InterstitialAdFrequency: 3
+--- !u!114 &664926875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664926869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ddeb5ab5c60a674b82f25cfb96ed28a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RifleFireSounds:
+  - {fileID: 8300000, guid: fe3cbf028cb95d043ae2aacf7e589b3b, type: 3}
+  - {fileID: 8300000, guid: 6e64da453986306428b8f5a32625bc5d, type: 3}
+  - {fileID: 8300000, guid: 92fc1443f0cddbf4f8d17eb7878e6a3e, type: 3}
+  - {fileID: 8300000, guid: d0389ca88d33c3a4a8a0c5c1d3ef18cb, type: 3}
+  - {fileID: 8300000, guid: 1c692aec4703bec479f7233ca13467c2, type: 3}
+  SniperFireSounds:
+  - {fileID: 8300000, guid: acc9b3764391bf141ab9eb12d5373c3d, type: 3}
+  RocketFireSounds:
+  - {fileID: 8300000, guid: f5e68376d27a2a048b3b5a8ce513b3c5, type: 3}
+  RocketHitSounds:
+  - {fileID: 8300000, guid: 9d5681d972529dc4481b35b498dcbf66, type: 3}
+  ExplosionSounds:
+  - {fileID: 8300000, guid: f961c8e7430d46c45aa0bb5bbf484c84, type: 3}
 --- !u!1 &672335473
 GameObject:
   m_ObjectHideFlags: 0

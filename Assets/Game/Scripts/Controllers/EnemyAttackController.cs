@@ -44,6 +44,7 @@ namespace Game.Controllers
                 {
                     bullet.SetLayer(ENEMY_BULLET_LAYER);
                     bullet.Shoot(MuzzleTransform.rotation, AllyTarget.transform);
+                    enemyAI.PlayFireSound();
                 }
             }
 
